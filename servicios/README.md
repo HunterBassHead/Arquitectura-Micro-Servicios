@@ -50,3 +50,96 @@ HOST: https://uaz.cloud.tyk.io/content
 Ejemplo de uso: 
 1. Abrir el navegador
 1. Ingresar a https://uaz.cloud.tyk.io/content/api/v1/information?t=Stranger+Things
+
+
+
+## Sentiment Analysis
+  
+FORMAT: 1A  
+HOST: http://localhost:8086
+
+## Sentiment Analysis [/api/v1/SentimentAnalysis{?t}]
+
++ Parameters
+    + t - Corresponde al comentario a procesar
+
+### Sentiment Analysis [GET]
+
++ Response 200 (application/json)
+
+        { 
+            "Some text"
+        }
+
++ Response 400 (text)
+
+        {
+            "title": "Bad Request"
+            "message": "The browser (or proxy) sent a request that this server could not understand."
+        }
+
+Ejemplo de uso: 
+1. Abrir el navegador
+1. Ingresar a http://localhost:8086/api/v1/SentimentAnalysis/get
+
+
+
+
+## percentage [/api/v1/SentimentAnalysis/get]
+
+### Get percentage [GET]
+
++ Response 200 (application/json)
+
+        { 
+            "positive": "Some text",
+            "neutral": "Some text", 
+            "negative": "Some text" 
+        }
+
++ Response 400 (text)
+
+        {
+            "title": "Bad Request"
+            "message": "The browser (or proxy) sent a request that this server could not understand."
+        }
+
+Ejemplo de uso: 
+1. Abrir el navegador
+1. Ingresar a http://localhost:8086/api/v1/SentimentAnalysis/get
+
+
+
+
+
+
+
+
+## Get twitter comment
+  
+FORMAT: 1A  
+HOST: http://localhost:8085/
+
+## twitter comment [/api/v1/tweets/set{?t}]
+
++ Parameters
+    + t - Corresponde al título de la película o serie de Netflix.
+
+### Get twitter comment [GET]
+
++ Response 200 (application/json)
+
+        { 
+            ""
+        }
+
++ Response 400 (text)
+
+        {
+            "title": "Bad Request"
+            "message": "The browser (or proxy) sent a request that this server could not understand."
+        }
+
+Ejemplo de uso: 
+1. Abrir el navegador
+1. Ingresar a http://localhost:8085/api/v1/tweets/set?t=Stranger+Things
